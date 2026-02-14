@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Devana 🤍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#800020,#ffc0cb,#f5f0e6);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+    color:#4a2c2a;
+    overflow-x:hidden;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:40px;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h1{
+    font-size:2.2rem;
+    margin-bottom:20px;
+}
+
+p{
+    max-width:700px;
+    line-height:1.8;
+    margin:10px 0;
+}
+
+button{
+    margin-top:30px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#800020;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background:#a00030;
+}
+
+.hidden{
+    display:none;
+}
+
+.heart{
+    position:fixed;
+    font-size:20px;
+    animation:float 6s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);opacity:1;}
+    100%{transform:translateY(-10vh);opacity:0;}
+}
+
+footer{
+    text-align:center;
+    padding:40px 0;
+    font-size:13px;
+    letter-spacing:1px;
+    color:#6e3b3b;
+    opacity:0.7;
+}
+</style>
+</head>
+<body>
+
+<!-- AUDIO AUTO -->
+<audio id="bgMusic" loop>
+    <source src="diewithasmile.mp3" type="audio/mpeg">
+</audio>
+
+<!-- OPENING -->
+<section class="show">
+    <h1>Hai Devana 🤍</h1>
+    <p>
+    Ini bukan sekadar halaman web 
+    Ini ruang kecil yang aku bikin khusus buat kamu.  
+    Jadi bukanya pelan-pelan ya… biar rasanya sampai.
+    </p>
+    <button onclick="startExperience()">Masuk ✨</button>
+</section>
+
+<section>
+    <h1>Awal Kita</h1>
+    <p>
+    Dari yang cuma ngobrol random,  
+    jadi kebiasaan.  
+    Dari kebiasaan… jadi nyaman.  
+    Dan tanpa sadar, nyaman itu jadi kamu.
+    </p>
+</section>
+
+<section>
+    <h1>Pengalaman Kita</h1>
+
+    <p>
+    Inget waktu awal-awal kita sering call malem-malem?  
+    Lama banget… tapi nggak pernah kehabisan topik.  
+    Selalu ada aja yang bisa dibahas.  
+    Dan dari situ aku sadar… ngobrol sama kamu itu nggak pernah ngebosenin.
+    </p>
+
+    <p>
+    Setiap kali aku overthinking atau jeles nggak jelas,  
+    kamu selalu jadi orang yang paling tenang.  
+    Kamu selalu nenangin aku, selalu ngerti,  
+    bahkan waktu aku sendiri nggak ngerti sama diri aku.
+    </p>
+
+    <p>
+    Sekarang mungkin semuanya nggak selalu sama seperti dulu.  
+    Tapi jujur aja… aku kadang kangen versi kamu yang dulu.  
+    Versi yang bikin aku ngerasa aman banget.
+    </p>
+
+    <p>
+    Semoga kita bisa nemuin lagi rasa itu…  
+    atau bahkan yang lebih baik.
+    </p>
+<section>
+    <h1>Kenangan Kita 📸</h1>
+
+    <p>
+    Beberapa momen yang mungkin kelihatan sederhana,  
+    tapi buat aku… selalu punya cerita.
+    </p>
+
+    <div style="
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap:20px;
+        max-width:900px;
+        margin-top:30px;
+    ">
+
+        <img src="foto1.jpg" class="foto">
+        <img src="foto2.jpg" class="foto">
+        <img src="foto3.jpg" class="foto">
+        <img src="foto4.jpg" class="foto">
+        <img src="foto5.jpg" class="foto">
+        <img src="foto6.jpg" class="foto">
+
+    </div>
+</section>
+
+<section>
+    <h1>Masih Mau Lanjut?</h1>
+    <button onclick="unlock()">Buka Rahasia 💌</button>
+
+    <div id="secret" class="hidden">
+    <h1>Untuk Devana</h1>
+
+    <p>
+    Makasih ya, Sayangg…  
+    udah hadir di hidup aku.  
+    Makasih udah sabar, bahkan di saat aku kadang nggak gampang buat dimengerti.
+    </p>
+
+    <p>
+    Aku juga mau minta maaf.  
+    Kalau selama ini aku sering salah.  
+    Sering overthinking.  
+    Sering mempermasalahkan hal-hal kecil yang sebenernya nggak perlu dibesar-besarin.
+    </p>
+
+    <p>
+    Aku sadar aku belum selalu jadi yang terbaik buat kamu.  
+    Tapi satu hal yang nggak pernah berubah —  
+    perasaan aku ke kamu tetap sama.
+    </p>
+
+    <p>
+    Aku cuma pengen kita sama-sama belajar,  
+    sama-sama dewasa,  
+    dan tetap milih satu sama lain setiap hari.
+    </p>
+
+    <p>
+    Selamat Hari Valentine, Devana 🤍  
+    Dari Rey, yang masih dan tetap sayang.
+    </p>
+</div>
+</section>
+
+<footer>
+    — made with love by Rey 🤍 —
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            sec.classList.add("show");
+        }
+    });
+});
+
+function startExperience(){
+    document.getElementById("bgMusic").play();
+    window.scrollBy({
+        top: window.innerHeight,
+        behavior: "smooth"
+    });
+}
+
+function unlock(){
+    document.getElementById("secret").classList.remove("hidden");
+}
+
+setInterval(()=>{
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "🤍";
+    heart.style.left = Math.random()*100 + "vw";
+    document.body.appendChild(heart);
+    setTimeout(()=>{ heart.remove(); },6000);
+},900);
+</script>
+
+</body>
+</html>
